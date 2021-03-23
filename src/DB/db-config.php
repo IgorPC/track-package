@@ -1,6 +1,6 @@
 <?php
 
-use Igor\Api\DB\Connection;
+use IgorPC\TrackPackage\DB\Connection;
 
 include (__DIR__.'/../autoload.php');
 

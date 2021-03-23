@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Igor\Api\DB;
+namespace IgorPC\TrackPackage\DB;
 
 use \PDO;
 

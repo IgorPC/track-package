@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Igor\Api;
+namespace IgorPC\TrackPackage;
 
 require_once "Routes/routes.php";
 require_once "functions.php";
@@ -41,7 +41,7 @@ class Router
             return send(["error" => 'internal error'], 500);
         }
 
-        $controller = "Igor\\Api\\Controllers\\".$controller;
+        $controller = "IgorPC\\TrackPackage\\Controllers\\".$controller;
 
         $control = new $controller();
         return $control->$method();

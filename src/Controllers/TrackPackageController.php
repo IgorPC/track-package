@@ -1,10 +1,10 @@
 <?php
 
 
-namespace Igor\Api\Controllers;
+namespace IgorPC\TrackPackage\Controllers;
 
 
-use Igor\Api\Models\TrackPackage;
+use IgorPC\TrackPackage\Models\TrackPackage;
 
 class TrackPackageController extends Controller
 {

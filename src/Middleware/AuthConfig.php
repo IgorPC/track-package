@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Igor\Api\Middleware;
+namespace IgorPC\TrackPackage\Middleware;
 
 class AuthConfig
 {

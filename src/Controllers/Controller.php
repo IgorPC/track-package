@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Igor\Api\Controllers;
+namespace IgorPC\TrackPackage\Controllers;
 
 require_once(__DIR__."/../Middleware/auth-middleware.php");
 include (__DIR__.'/../autoload.php');

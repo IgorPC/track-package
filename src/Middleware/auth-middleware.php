@@ -1,6 +1,6 @@
 <?php
 
-use Igor\Api\Middleware\AuthConfig;
+use IgorPC\TrackPackage\Middleware\AuthConfig;
 
 require_once ("AuthConfig.php");
 

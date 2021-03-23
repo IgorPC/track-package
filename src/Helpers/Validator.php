@@ -1,7 +1,7 @@
 <?php
 
 
-namespace Igor\Api\Helpers;
+namespace IgorPC\TrackPackage\Helpers;
 
 
 class Validator

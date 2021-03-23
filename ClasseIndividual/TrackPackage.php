@@ -13,6 +13,23 @@ class TrackPackage
         '3', '4', '5', '6', '7', '8', '9', '0', ':', '/'
     ];
 
+    private array $vowels = [
+        'accents' => [
+            'á', 'Á', 'â', 'Â', 'ã', 'Ã', 'à', 'Á',
+            'é', 'É', 'ê', 'Ê', 'è', 'È',
+            'í', 'Í', 'î', 'Î', 'ì', 'Ì',
+            'ó', 'Ó', 'ô', 'Ô', 'õ', 'Õ', 'ò', 'Ò',
+            'ú', 'Ú', 'û', 'Û', 'ù', 'Ù'
+        ],
+        'valid' => [
+            'a', 'A', 'a', 'A', 'a', 'A', 'a', 'A',
+            'e', 'E', 'e', 'E', 'e', 'E',
+            'i', 'I', 'i', 'I', 'i', 'I',
+            'o', 'O', 'o', 'O', 'o', 'O', 'o', 'O',
+            'u', 'U', 'u', 'U', 'u', 'U'
+        ]
+    ];
+
     public function trackPackage($trackingCode)
     {
         $html = $this->connectToWs("https://www2.correios.com.br/sistemas/rastreamento/resultado_semcontent.cfm", $trackingCode);
@@ -50,11 +67,9 @@ class TrackPackage
 
     private function removeEmptySpaces($elements)
     {
-        setlocale(LC_ALL, "pt_BR.utf8");
-
         foreach ($elements as $key => $resp){
             $string = '';
-            $resp = iconv("utf-8", "ascii//IGNORE", $resp);;
+            $resp = str_replace($this->vowels['accents'], $this->vowels['valid'], $resp);
             $len = strlen($resp);
             for ($i = 0; $i < $len; $i++){
                 if(in_array($resp[$i], $this->valid)){
